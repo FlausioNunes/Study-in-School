@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Salários da Família</title>
+</head>
+<body>
+    <h1>Calculadora de Salários da Família</h1>
+    <div id="formulario">
+        <label for="quantidade">Quantidade de membros da família:</label>
+        <input type="number" id="quantidade" min="1" />
+        <button onclick="criarCampos()">Criar Campos</button>
+    </div>
+    <form id="salariosForm" style="margin-top:20px; display:none;">
+        <div id="camposSalarios"></div>
+        <button type="button" onclick="calcularTotal()">Calcular Total</button>
+    </form>
+    <h2 id="resultado"></h2>
+
+    <script src="Numero 1.js"></script>
+</body>
+</html>

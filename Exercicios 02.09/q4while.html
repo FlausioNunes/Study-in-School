@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Maior e Menor Valor com While</title>
+</head>
+<body>
+    <h1>Encontrar o Maior e Menor Valor</h1>
+    <button onclick="executar()">Iniciar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function executar() {
+            let maior = -Infinity;
+            let menor = Infinity;
+            let contador = 1;
+
+            while (contador <= 10) {
+                let entrada = prompt(`Digite o valor ${contador} de 10:`);
+                let valor = parseFloat(entrada);
+
+                if (isNaN(valor)) {
+                    alert('Valor inválido. Por favor, insira um número válido.');
+                    // não incrementa o contador, repete a leitura
+                } else {
+                    if (valor > maior) maior = valor;
+                    if (valor < menor) menor = valor;
+                    contador++;
+                }
+            }
+
+            document.getElementById('resultado').textContent = 
+                `Maior valor: ${maior}\nMenor valor: ${menor}`;
+        }
+    </script>
+</body>
+</html>
